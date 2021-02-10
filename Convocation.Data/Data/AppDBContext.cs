@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Convocation.Data.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Convocation.Data.Data
 {
-    public class AppDBContext:IdentityDbContext
+    public class AppDBContext:IdentityDbContext<ApplicationUser>
     {
-        public AppDBContext(DbContextOptions<AppDBContext> context):base(context)
+        public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
         {
 
         }
